@@ -1,4 +1,4 @@
-package models;
+package com.codeclan.MacrOS_backend.models;
 
 public enum ActivityLevel {
 
