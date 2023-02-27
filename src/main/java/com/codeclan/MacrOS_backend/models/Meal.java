@@ -3,6 +3,7 @@ package com.codeclan.MacrOS_backend.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,13 +18,15 @@ public class Meal {
     private Long id;
     @Column(name="mealType")
     private MealType mealType;
-
-
-
-//    @JsonBackReference
-//    @OneToMany(mappedBy = "meal",fetch = FetchType.LAZY)
-    @Column(name = "foodItems")
+    @JsonIgnoreProperties({"meals"})
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "meals_foodItems",
+            joinColumns = {@JoinColumn(name = "meal_id",nullable = false,updatable = false)}
+    )
     private List<FoodItem> foodItems;
+
 
     @JsonIgnoreProperties({"meals"})
     @ManyToOne

@@ -1,6 +1,9 @@
 package com.codeclan.MacrOS_backend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -34,6 +37,11 @@ public class User {
     private double carbsGoal;
     @Column(name = "sugarsGoal")
     private double sugarsGoal;
+
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    private List<Day> days;
 
 
     public User(int age, String sex, double height, double startingWeight, double currentWeight, double goalWeight, ActivityLevel activityLevel, Long experiencePoints, double caloriesGoal, double proteinGoal, double fatGoal, double carbsGoal, double sugarsGoal) {

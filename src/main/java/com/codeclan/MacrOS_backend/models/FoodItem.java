@@ -33,6 +33,7 @@ public class FoodItem {
 
 
 
+
     public FoodItem(String name, double carbs, double sugars, double protein, double fat, double calories, Long barcode) {
         this.name = name;
         this.carbs = carbs;

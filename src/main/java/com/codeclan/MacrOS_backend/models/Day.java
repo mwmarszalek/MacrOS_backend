@@ -1,6 +1,7 @@
 package com.codeclan.MacrOS_backend.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -18,15 +19,18 @@ public class Day {
     @Column(name = "date")
     private LocalDate date;
 
+    @JsonIgnoreProperties({"days"})
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable = false)
+    private User user;
+
     @JsonBackReference
     @OneToMany(mappedBy = "day", fetch = FetchType.LAZY)
     private List<Meal> meals;
 
-
     @Column(name="completed")
     private boolean completed;
-    @Column(name="user")
-    private User user;
+
 
 
 
