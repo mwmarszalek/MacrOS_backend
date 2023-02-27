@@ -20,8 +20,9 @@ public class Meal {
 
 
 
-    @JsonBackReference
-    @OneToMany(mappedBy = "meal",fetch = FetchType.LAZY)
+//    @JsonBackReference
+//    @OneToMany(mappedBy = "meal",fetch = FetchType.LAZY)
+    @Column(name = "foodItems")
     private List<FoodItem> foodItems;
 
     @JsonIgnoreProperties({"meals"})

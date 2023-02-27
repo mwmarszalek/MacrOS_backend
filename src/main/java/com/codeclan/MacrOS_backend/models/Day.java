@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -19,7 +20,7 @@ public class Day {
 
     @JsonBackReference
     @OneToMany(mappedBy = "day", fetch = FetchType.LAZY)
-    private ArrayList<Meal> meals;
+    private List<Meal> meals;
 
 
     @Column(name="completed")
@@ -30,9 +31,9 @@ public class Day {
 
 
 
-    public Day(LocalDate date, ArrayList<Meal> meals, User user) {
+    public Day(LocalDate date,  User user) {
         this.date = date;
-        this.meals = meals;
+        this.meals = new ArrayList<>();
         this.completed = false;
         this.user = user;
     }
@@ -58,11 +59,11 @@ public class Day {
         this.date = date;
     }
 
-    public ArrayList<Meal> getMeals() {
+    public List<Meal> getMeals() {
         return meals;
     }
 
-    public void setMeals(ArrayList<Meal> meals) {
+    public void setMeals(List<Meal> meals) {
         this.meals = meals;
     }
 

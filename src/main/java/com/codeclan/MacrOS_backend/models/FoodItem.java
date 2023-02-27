@@ -29,6 +29,10 @@ public class FoodItem {
     @Column(name = "barcode")
     private Long barcode;
 
+
+
+
+
     public FoodItem(String name, double carbs, double sugars, double protein, double fat, double calories, Long barcode) {
         this.name = name;
         this.carbs = carbs;
