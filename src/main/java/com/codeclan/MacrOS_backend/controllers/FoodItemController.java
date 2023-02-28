@@ -18,10 +18,15 @@ public class FoodItemController {
     @Autowired
     FoodItemRepository foodItemRepository;
 
-    @GetMapping(value = "/foodItems")
+    @GetMapping(value = "/fooditems")
     public ResponseEntity<List<FoodItem>> getAllFoodItems(){
         return new ResponseEntity<>(foodItemRepository.findAll(), HttpStatus.OK);
     }
+
+
+
+
+
 
 
 
