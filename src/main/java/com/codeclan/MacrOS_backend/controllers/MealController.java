@@ -27,6 +27,11 @@ public class MealController {
         return new ResponseEntity<>(mealRepository.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/meals/{id}")
+    public ResponseEntity getMeal(@PathVariable Long id){
+        return new ResponseEntity<>(mealRepository.findById(id), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/meals")
     public ResponseEntity postMeal(@RequestBody Meal meal){
         mealRepository.save(meal);
