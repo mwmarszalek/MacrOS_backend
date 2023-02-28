@@ -37,7 +37,7 @@ public class MealController {
     public ResponseEntity deleteMealById(@PathVariable Long id){
         Optional<Meal> mealToDelete = mealRepository.findById(id);
         mealRepository.delete(mealToDelete.get());
-        return new ResponseEntity(mealToDelete.get(), HttpStatus.OK)
+        return new ResponseEntity(mealToDelete.get(), HttpStatus.OK);
     }
 
     @PutMapping(value = "/meals/{id}")

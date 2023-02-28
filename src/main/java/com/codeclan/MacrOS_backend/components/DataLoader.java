@@ -1,6 +1,6 @@
 package com.codeclan.MacrOS_backend.components;
 
-import com.codeclan.MacrOS_backend.models.FoodItem;
+import com.codeclan.MacrOS_backend.models.*;
 import com.codeclan.MacrOS_backend.repositories.DayRepository;
 import com.codeclan.MacrOS_backend.repositories.FoodItemRepository;
 import com.codeclan.MacrOS_backend.repositories.MealRepository;
@@ -15,9 +15,12 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static java.time.temporal.TemporalQueries.localDate;
 
 
 @Profile("!test")
@@ -27,6 +30,12 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     FoodItemRepository foodItemRepository;
+    @Autowired
+    DayRepository dayRepository;
+    @Autowired
+    MealRepository mealRepository;
+    @Autowired
+    UserRepository userRepository;
 
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -41,7 +50,14 @@ public class DataLoader implements ApplicationRunner {
         });
         foodItemRepository.saveAll(foodItem);
 
+//        Add dummy data in order to test day and meal controllers
+
+//        User user1 = new User(29, "Male", 180, 80, 82, 84, ActivityLevel.ACTIVE, 1000L, 3000, 170, 120, 400, 80);
+//        Day day1 = new Day([2022, 11, 27],user1);
+//        Meal meal1 = new Meal(MealType.BREAKFAST, day1, );
+
 
     }
-
 }
+
+
