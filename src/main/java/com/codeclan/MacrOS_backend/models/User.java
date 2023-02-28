@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -24,6 +24,7 @@ public class User {
     @Column(name = "goalWeight")
     private double goalWeight;
     @Column(name = "activityLevel")
+    @Enumerated(EnumType.STRING)
     private ActivityLevel activityLevel;
     @Column(name = "experiencePoints")
     private Long experiencePoints;

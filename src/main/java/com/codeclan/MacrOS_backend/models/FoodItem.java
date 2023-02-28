@@ -27,14 +27,14 @@ public class FoodItem {
     @Column(name = "calories")
     private double calories;
     @Column(name = "barcode")
-    private Long barcode;
+    private String barcode;
 
 
 
 
 
 
-    public FoodItem(String name, double carbs, double sugars, double protein, double fat, double calories, Long barcode) {
+    public FoodItem(String name, double carbs, double sugars, double protein, double fat, double calories, String barcode) {
         this.name = name;
         this.carbs = carbs;
         this.sugars = sugars;
@@ -105,11 +105,11 @@ public class FoodItem {
         this.calories = calories;
     }
 
-    public Long getBarcode() {
+    public String getBarcode() {
         return barcode;
     }
 
-    public void setBarcode(Long barcode) {
+    public void setBarcode(String barcode) {
         this.barcode = barcode;
     }
 }
