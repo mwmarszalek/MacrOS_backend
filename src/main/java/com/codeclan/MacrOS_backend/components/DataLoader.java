@@ -33,6 +33,8 @@ public class DataLoader implements ApplicationRunner {
 
     }
 
+
+
     public void run(ApplicationArguments args) {
     FoodItem foodItem1 = new FoodItem("Chocolate",24,213,321,312,432,3254253L);
     foodItemRepository.save(foodItem1);

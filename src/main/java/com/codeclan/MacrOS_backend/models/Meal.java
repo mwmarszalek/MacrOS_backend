@@ -39,6 +39,7 @@ public class Meal {
         this.day = day;
     }
 
+
     public Meal() {
 
     }

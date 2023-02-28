@@ -18,21 +18,15 @@ public class Day {
     private Long id;
     @Column(name = "date")
     private LocalDate date;
-
     @JsonIgnoreProperties({"days"})
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;
-
     @JsonBackReference
     @OneToMany(mappedBy = "day", fetch = FetchType.LAZY)
     private List<Meal> meals;
-
     @Column(name="completed")
     private boolean completed;
-
-
-
 
 
     public Day(LocalDate date,  User user) {
