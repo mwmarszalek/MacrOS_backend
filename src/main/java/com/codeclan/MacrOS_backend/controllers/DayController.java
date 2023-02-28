@@ -23,9 +23,9 @@ public class DayController {
     }
 
     @PostMapping(value = "/days")
-    public ResponseEntity postDay(@RequestBody Day day){
+    public ResponseEntity<Day> postDay(@RequestBody Day day){
         dayRepository.save(day);
-        return new ResponseEntity<>(dayRepository.findById(day.getId()), HttpStatus.CREATED);
+        return new ResponseEntity<>(day, HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/days/{id}")
