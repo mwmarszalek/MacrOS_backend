@@ -15,7 +15,7 @@ import java.util.Optional;
 public class DayController {
 
     @Autowired
-    DayRepository dayRepository
+    DayRepository dayRepository;
 
     @GetMapping(value = "/days")
     public ResponseEntity<List<Day>> getAllDays(){
