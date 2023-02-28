@@ -31,7 +31,7 @@ public class UserController {
     @PostMapping(value = "/user")
     public ResponseEntity<User> postUserInfo(@RequestBody User user){
         userRepository.save(user);
-        return new ResponseEntity<>(user, HttpStatus.CREATED);
+        return new ResponseEntity<>(userRepository.findById(user.getId()).get(), HttpStatus.CREATED);
     }
     // PUT
 

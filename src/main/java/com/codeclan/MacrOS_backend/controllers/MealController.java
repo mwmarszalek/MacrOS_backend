@@ -33,7 +33,7 @@ public class MealController {
     }
 
     @PostMapping(value = "/meals")
-    public ResponseEntity postMeal(@RequestBody Meal meal){
+    public ResponseEntity<Meal> postMeal(@RequestBody Meal meal){
         mealRepository.save(meal);
         return new ResponseEntity<>(mealRepository.findById(meal.getId()).get(), HttpStatus.CREATED);
     }
