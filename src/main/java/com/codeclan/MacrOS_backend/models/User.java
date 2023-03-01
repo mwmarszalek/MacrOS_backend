@@ -11,6 +11,8 @@ public class User {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
+    private String name;
     @Column(name = "age")
     private int age;
     @Column(name = "sex")
@@ -45,7 +47,8 @@ public class User {
     private List<Day> days;
 
 
-    public User(int age, String sex, double height, double startingWeight, double currentWeight, double goalWeight, ActivityLevel activityLevel, Long experiencePoints, double caloriesGoal, double proteinGoal, double fatGoal, double carbsGoal, double sugarsGoal) {
+    public User(String name, int age, String sex, double height, double startingWeight, double currentWeight, double goalWeight, ActivityLevel activityLevel, Long experiencePoints, double caloriesGoal, double proteinGoal, double fatGoal, double carbsGoal, double sugarsGoal) {
+        this.name = name;
         this.age = age;
         this.sex = sex;
         this.height = height;
@@ -68,6 +71,14 @@ public class User {
 
     public Long getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(Long id) {
