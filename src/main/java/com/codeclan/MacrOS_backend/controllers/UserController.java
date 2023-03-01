@@ -38,6 +38,7 @@ public class UserController {
     @PutMapping(value = "/user/{id}")
     public ResponseEntity<User> updateUserInfo(@PathVariable Long id, @RequestBody User updatedUser){
         User userToUpdate = userRepository.findById(id).get();
+        userToUpdate.setName(updatedUser.getName());
         userToUpdate.setAge(updatedUser.getAge());
         userToUpdate.setSex(updatedUser.getSex());
         userToUpdate.setHeight(updatedUser.getHeight());
