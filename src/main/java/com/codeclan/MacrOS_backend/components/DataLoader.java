@@ -23,8 +23,8 @@ import java.util.List;
 import static java.time.temporal.TemporalQueries.localDate;
 
 
-@Profile("!test")
-@Component
+//@Profile("!test")
+//@Component
 public class DataLoader implements ApplicationRunner {
 
 
@@ -55,7 +55,15 @@ public class DataLoader implements ApplicationRunner {
         User user1 = new User("Brian", 29, "Male", 180, 80, 82, 84, ActivityLevel.ACTIVE, 1000L, 3000, 170, 120, 400, 80);
         userRepository.save(user1);
         Day day1 = new Day(LocalDate.of(2023, 2, 27),user1);
+        Day day2 = new Day(LocalDate.of(2023, 2, 26), user1);
+        Day day3 = new Day(LocalDate.of(2023, 2, 25), user1);
+        Day day4 = new Day(LocalDate.of(2023, 2, 24), user1);
+        Day day5 = new Day(LocalDate.of(2023, 2, 23), user1);
         dayRepository.save(day1);
+        dayRepository.save(day2);
+        dayRepository.save(day3);
+        dayRepository.save(day4);
+        dayRepository.save(day5);
         Meal meal1 = new Meal(MealType.BREAKFAST, day1);
         mealRepository.save(meal1);
 
