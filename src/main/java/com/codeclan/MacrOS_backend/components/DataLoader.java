@@ -98,10 +98,6 @@ public class DataLoader implements ApplicationRunner {
         meal2.setFoodItems(lunchFoodItemList);
         meal3.setFoodItems(dinnerFoodItemList);
         meal4.setFoodItems(snackFoodItemList);
-        mealRepository.save(meal1);
-        mealRepository.save(meal2);
-        mealRepository.save(meal3);
-        mealRepository.save(meal4);
 
         List<Meal> day1Meals =  new ArrayList<>();
         day1Meals.add(meal1);
@@ -112,11 +108,6 @@ public class DataLoader implements ApplicationRunner {
         day1.setMeals(day1Meals);
         day2.setMeals(day1Meals);
         day3.setMeals(day1Meals);
-        dayRepository.save(day1);
-        dayRepository.save(day2);
-        dayRepository.save(day3);
-        dayRepository.save(day4);
-        dayRepository.save(day5);
 
 
     }
