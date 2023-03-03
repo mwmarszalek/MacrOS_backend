@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class FoodItemController {
@@ -18,7 +19,10 @@ public class FoodItemController {
 
     // get all food items
     @GetMapping(value = "/fooditems")
-    public ResponseEntity<List<FoodItem>> getAllFoodItems(){
+    public ResponseEntity<List<FoodItem>> getAllFoodItems(@RequestParam Optional<String> letters){
+        if(letters.isPresent()){
+            return new ResponseEntity<>(foodItemRepository.findByNameStartingWithIgnoreCase(letters.get()), HttpStatus.OK);
+        }
         return new ResponseEntity<>(foodItemRepository.findAll(), HttpStatus.OK);
     }
     // get food item by id

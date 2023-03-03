@@ -10,4 +10,6 @@ public interface FoodItemRepository extends JpaRepository<FoodItem,Long> {
     List<FoodItem> findByName(String name);
     List<FoodItem> findByBarcode(String barcode);
 
+    List<FoodItem> findByNameStartingWithIgnoreCase(String letters);
+
 }
