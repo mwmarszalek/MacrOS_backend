@@ -52,12 +52,12 @@ public class DataLoader implements ApplicationRunner {
 
 //        Add dummy data in order to test day and meal controllers
 
-        User user1 = new User("Brian", 29, "Male", 180, 80, 82, 84, ActivityLevel.ACTIVE, 1000L, 3000, 170, 120, 400, 80);
-        userRepository.save(user1);
-        Day day1 = new Day(LocalDate.of(2023, 2, 27),user1);
-        dayRepository.save(day1);
-        Meal meal1 = new Meal(MealType.BREAKFAST, day1);
-        mealRepository.save(meal1);
+//        User user1 = new User("Brian", 29, "Male", 180, 80, 82, 84, ActivityLevel.ACTIVE, GoalType.GAIN_WEIGHT, 1000L, 3000, 170, 120, 400, 80);
+//        userRepository.save(user1);
+//        Day day1 = new Day(LocalDate.of(2023, 2, 27),user1);
+//        dayRepository.save(day1);
+//        Meal meal1 = new Meal(MealType.BREAKFAST, day1);
+//        mealRepository.save(meal1);
 
 
     }
