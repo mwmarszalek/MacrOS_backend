@@ -22,7 +22,7 @@ public class Day {
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;
-    @JsonBackReference
+//    @JsonBackReference
     @OneToMany(mappedBy = "day", fetch = FetchType.LAZY)
     private List<Meal> meals;
     @Column(name="completed")
