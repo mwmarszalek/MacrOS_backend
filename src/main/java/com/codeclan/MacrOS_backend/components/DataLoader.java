@@ -107,10 +107,10 @@ public class DataLoader implements ApplicationRunner {
         meal3.setFoodItems(dinnerList);
         meal4.setFoodItems(snackList);
 
-//        mealRepository.save(meal1);
-//        mealRepository.save(meal2);
-//        mealRepository.save(meal3);
-//        mealRepository.save(meal4);
+        mealRepository.save(meal1);
+        mealRepository.save(meal2);
+        mealRepository.save(meal3);
+        mealRepository.save(meal4);
 
         List<Meal> mealList = new ArrayList<>();
 
