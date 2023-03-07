@@ -40,7 +40,7 @@ public class DayController {
     public ResponseEntity updateDayById (@PathVariable Long id, @RequestBody Day updatedDay){
         Day dayToUpdate = dayRepository.findById(id).get();
         dayToUpdate.setDate(updatedDay.getDate());
-        dayToUpdate.setCompleted(updatedDay.isCompleted());
+        dayToUpdate.setCompleted(true);
         dayToUpdate.setUser(updatedDay.getUser());
         dayToUpdate.setMeals(updatedDay.getMeals());
         dayRepository.save(dayToUpdate);
