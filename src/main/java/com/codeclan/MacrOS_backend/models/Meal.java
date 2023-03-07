@@ -40,7 +40,7 @@ public class Meal {
     }
 
 
-    public Meal() {
+    public Meal() { 
 
     }
 
