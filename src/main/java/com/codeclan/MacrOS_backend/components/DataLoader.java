@@ -125,42 +125,100 @@ public class DataLoader implements ApplicationRunner {
         foodItemRepository.save(foodItem5);
         foodItemRepository.save(foodItem6);
 
-        List<FoodItem> breakfastList = new ArrayList<>();
-        breakfastList.add(foodItem1);
+//      Create FoodItem List1
 
-        List<FoodItem> lunchList = new ArrayList<>();
-        lunchList.add(foodItem2);
+        List<FoodItem> breakfastList1 = new ArrayList<>();
+        breakfastList1.add(foodItem1);
 
-        List<FoodItem> dinnerList = new ArrayList<>();
-        dinnerList.add(foodItem3);
+        List<FoodItem> lunchList1 = new ArrayList<>();
+        lunchList1.add(foodItem2);
 
-        List<FoodItem> snackList = new ArrayList<>();
-        snackList.add(foodItem4);
+        List<FoodItem> dinnerList1 = new ArrayList<>();
+        dinnerList1.add(foodItem3);
 
-        day1Meal1.setFoodItems(breakfastList);
-        day1Meal2.setFoodItems(lunchList);
-        day1Meal3.setFoodItems(dinnerList);
-        day1Meal4.setFoodItems(snackList);
+        List<FoodItem> snackList1 = new ArrayList<>();
+        snackList1.add(foodItem4);
 
-        day2Meal1.setFoodItems(breakfastList);
-        day2Meal2.setFoodItems(lunchList);
-        day2Meal3.setFoodItems(dinnerList);
-        day2Meal4.setFoodItems(snackList);
+//        Create FoodItem List2
 
-        day3Meal1.setFoodItems(breakfastList);
-        day3Meal2.setFoodItems(lunchList);
-        day3Meal3.setFoodItems(dinnerList);
-        day3Meal4.setFoodItems(snackList);
+        List<FoodItem> breakfastList2 = new ArrayList<>();
+        breakfastList2.add(foodItem5);
 
-        day4Meal1.setFoodItems(breakfastList);
-        day4Meal2.setFoodItems(lunchList);
-        day4Meal3.setFoodItems(dinnerList);
-        day4Meal4.setFoodItems(snackList);
+        List<FoodItem> lunchList2 = new ArrayList<>();
+        lunchList2.add(foodItem6);
 
-        day5Meal1.setFoodItems(breakfastList);
-        day5Meal2.setFoodItems(lunchList);
-        day5Meal3.setFoodItems(dinnerList);
-        day5Meal4.setFoodItems(snackList);
+        List<FoodItem> dinnerList2 = new ArrayList<>();
+        dinnerList2.add(foodItem1);
+
+        List<FoodItem> snackList2 = new ArrayList<>();
+        snackList2.add(foodItem2);
+
+        //        Create FoodItem List3
+
+        List<FoodItem> breakfastList3 = new ArrayList<>();
+        breakfastList3.add(foodItem3);
+
+        List<FoodItem> lunchList3 = new ArrayList<>();
+        lunchList3.add(foodItem4);
+
+        List<FoodItem> dinnerList3 = new ArrayList<>();
+        dinnerList3.add(foodItem5);
+
+        List<FoodItem> snackList3 = new ArrayList<>();
+        snackList3.add(foodItem6);
+
+        //        Create FoodItem List4
+
+        List<FoodItem> breakfastList4 = new ArrayList<>();
+        breakfastList4.add(foodItem1);
+
+        List<FoodItem> lunchList4 = new ArrayList<>();
+        lunchList4.add(foodItem2);
+
+        List<FoodItem> dinnerList4 = new ArrayList<>();
+        dinnerList4.add(foodItem3);
+
+        List<FoodItem> snackList4 = new ArrayList<>();
+        snackList4.add(foodItem4);
+
+        //        Create FoodItem List5
+
+        List<FoodItem> breakfastList5 = new ArrayList<>();
+        breakfastList5.add(foodItem5);
+
+        List<FoodItem> lunchList5 = new ArrayList<>();
+        lunchList5.add(foodItem6);
+
+        List<FoodItem> dinnerList5 = new ArrayList<>();
+        dinnerList5.add(foodItem1);
+
+        List<FoodItem> snackList5 = new ArrayList<>();
+        snackList5.add(foodItem2);
+
+        day1Meal1.setFoodItems(breakfastList1);
+        day1Meal2.setFoodItems(lunchList1);
+        day1Meal3.setFoodItems(dinnerList1);
+        day1Meal4.setFoodItems(snackList1);
+
+        day2Meal1.setFoodItems(breakfastList2);
+        day2Meal2.setFoodItems(lunchList2);
+        day2Meal3.setFoodItems(dinnerList2);
+        day2Meal4.setFoodItems(snackList2);
+
+        day3Meal1.setFoodItems(breakfastList3);
+        day3Meal2.setFoodItems(lunchList3);
+        day3Meal3.setFoodItems(dinnerList3);
+        day3Meal4.setFoodItems(snackList3);
+
+        day4Meal1.setFoodItems(breakfastList4);
+        day4Meal2.setFoodItems(lunchList4);
+        day4Meal3.setFoodItems(dinnerList4);
+        day4Meal4.setFoodItems(snackList4);
+
+        day5Meal1.setFoodItems(breakfastList5);
+        day5Meal2.setFoodItems(lunchList5);
+        day5Meal3.setFoodItems(dinnerList5);
+        day5Meal4.setFoodItems(snackList5);
 
         mealRepository.save(day1Meal1);
         mealRepository.save(day1Meal2);
