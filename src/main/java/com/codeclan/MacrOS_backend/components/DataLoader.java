@@ -55,11 +55,11 @@ public class DataLoader implements ApplicationRunner {
 
         User user1 = new User("Brian", 29, "Male", 180, 80, 82, 75, ActivityLevel.ACTIVE, GoalType.GAIN_WEIGHT, 1000L, 3000, 170, 120, 400, 80);
         userRepository.save(user1);
-        Day day1 = new Day(LocalDate.of(2023, 3, 6), user1);
-        Day day2 = new Day(LocalDate.of(2023, 3, 5), user1);
-        Day day3 = new Day(LocalDate.of(2023, 3, 4), user1);
-        Day day4 = new Day(LocalDate.of(2023, 3, 3), user1);
-        Day day5 = new Day(LocalDate.of(2023, 3, 2), user1);
+        Day day1 = new Day(LocalDate.of(2023, 3, 8), user1);
+        Day day2 = new Day(LocalDate.of(2023, 3, 7), user1);
+        Day day3 = new Day(LocalDate.of(2023, 3, 6), user1);
+        Day day4 = new Day(LocalDate.of(2023, 3, 5), user1);
+        Day day5 = new Day(LocalDate.of(2023, 3, 4), user1);
         dayRepository.save(day1);
         dayRepository.save(day2);
         dayRepository.save(day3);
