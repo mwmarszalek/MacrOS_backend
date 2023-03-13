@@ -22,11 +22,13 @@ public class Day {
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;
-    @JsonBackReference
+//    @JsonBackReference
     @OneToMany(mappedBy = "day", fetch = FetchType.LAZY)
     private List<Meal> meals;
     @Column(name="completed")
     private boolean completed;
+    @Column(name="user_weight")
+    private double userWeight;
 
 
     public Day(LocalDate date,  User user) {
@@ -34,6 +36,7 @@ public class Day {
         this.meals = new ArrayList<>();
         this.completed = false;
         this.user = user;
+        this.userWeight = user.getCurrentWeight();
     }
 
     public Day() {
@@ -79,5 +82,13 @@ public class Day {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public double getUserWeight() {
+        return userWeight;
+    }
+
+    public void setUserWeight(double userWeight) {
+        this.userWeight = userWeight;
     }
 }

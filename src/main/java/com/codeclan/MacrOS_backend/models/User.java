@@ -28,6 +28,9 @@ public class User {
     @Column(name = "activityLevel")
     @Enumerated(EnumType.STRING)
     private ActivityLevel activityLevel;
+    @Column(name = "goal")
+    @Enumerated(EnumType.STRING)
+    private GoalType goalType;
     @Column(name = "experiencePoints")
     private Long experiencePoints;
     @Column(name = "caloriesGoal")
@@ -47,7 +50,7 @@ public class User {
     private List<Day> days;
 
 
-    public User(String name, int age, String sex, double height, double startingWeight, double currentWeight, double goalWeight, ActivityLevel activityLevel, Long experiencePoints, double caloriesGoal, double proteinGoal, double fatGoal, double carbsGoal, double sugarsGoal) {
+    public User(String name, int age, String sex, double height, double startingWeight, double currentWeight, double goalWeight, ActivityLevel activityLevel, GoalType goalType, Long experiencePoints, double caloriesGoal, double proteinGoal, double fatGoal, double carbsGoal, double sugarsGoal) {
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -56,6 +59,7 @@ public class User {
         this.currentWeight = currentWeight;
         this.goalWeight = goalWeight;
         this.activityLevel = activityLevel;
+        this.goalType = goalType;
         this.experiencePoints = experiencePoints;
         this.caloriesGoal = caloriesGoal;
         this.proteinGoal = proteinGoal;
@@ -64,6 +68,21 @@ public class User {
         this.sugarsGoal = sugarsGoal;
     }
 
+    public GoalType getGoalType() {
+        return goalType;
+    }
+
+    public void setGoalType(GoalType goalType) {
+        this.goalType = goalType;
+    }
+
+    public List<Day> getDays() {
+        return days;
+    }
+
+    public void setDays(List<Day> days) {
+        this.days = days;
+    }
 
     public User() {
 
