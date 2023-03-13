@@ -6,7 +6,7 @@
 
 MacrOS is a full-stack calorie tracking application, with functionality allowing users set nutrition goals, track and view their daily food/calorie/macro intake and monitor their progress over time.
 
-## Front-end technologies:
+## [Front-end](https://github.com/larrywongkahei/MacrOS) technologies:
 
 * React JS
 * Bootstrap for React
@@ -16,7 +16,7 @@ MacrOS is a full-stack calorie tracking application, with functionality allowing
   <img height="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
 </span>
 
-## [Back-end](https://github.com/mwmarszalek/MacrOS_backend) technologies:
+## Back-end technologies:
 
 * Java
 * Spring Boot
